@@ -1,5 +1,6 @@
-import 'package:dartpad_gen_cli/dartpad_gen_cli.dart' as dartpad_gen_cli;
+import 'package:dartpad_gen_cli/dartpad_gen_cli.dart';
 
-void main(List<String> arguments) {
-  print('Hello world: ${dartpad_gen_cli.calculate()}!');
+void main(List<String> fileNames) {
+  final dartpadGenerator = DartpadGenerator(fileNames: fileNames);
+  dartpadGenerator.invokeGenerator();
 }
