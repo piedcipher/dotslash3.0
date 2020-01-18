@@ -13,7 +13,7 @@
     - Flutter
 
 - [VSCode Extension](https://github.com/piedcipher/dotslash3.0/tree/master/dartpad_gen_vscode)
-    - Coming Soon
+    - TypeScript
     
 ## Dependencies
 - [http](https://pub.dev/packages/http)
