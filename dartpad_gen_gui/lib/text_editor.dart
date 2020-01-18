@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'networking.dart';
 
 class Texteditor extends StatefulWidget {
 
@@ -42,7 +43,10 @@ class _TexteditorState extends State<Texteditor> {
         ),
       ),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
+        onPressed: () async{
+          final data = await Network(data: "${widget.value}").compile();
+          print(data);
+        },
         splashColor: Colors.white,
         tooltip: 'Get Link',
         label: Text('Get Link'),
