@@ -10,10 +10,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'File Picker',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
       home: MyHomePage(title: 'File Picker'),
     );
   }
@@ -49,7 +47,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
 
     return Scaffold(
+      backgroundColor: Color(0xFF1C2834),
       appBar: AppBar(
+        backgroundColor: Color(0xFF12202F),
         title: Text(widget.title),
       ),
       body: Center(
@@ -58,11 +58,13 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'Add Dart File by clicking on the button',
+              style: TextStyle(color: Colors.white),
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.pink,
         onPressed: (){
           file_picker();
         },
