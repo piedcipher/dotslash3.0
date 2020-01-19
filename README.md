@@ -33,7 +33,7 @@ Developer Tool
 
 - Dartpad Generator can be accessed via Mobile app, CommandLine App or VSCode Extension.
 - underneath the hood it makes a POST HTTP call to gist API to generate sharable dartpad :link: and does the heavy lifting for you.
-- Built for Developers by Developers :blue-heart:
+- Built for Developers by Developers :blue_heart:
 
 ## TechStack
 - [CLI App](https://github.com/piedcipher/dotslash3.0/tree/master/dartpad_gen_cli)
