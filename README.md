@@ -19,6 +19,10 @@
 - VSCode
 
 ![](https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/vscode_demo.gif)
+
+- CLI
+
+![](https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/cli_demo.gif)
     
 ## Dart/Flutter Dependencies
 - [http](https://pub.dev/packages/http)
