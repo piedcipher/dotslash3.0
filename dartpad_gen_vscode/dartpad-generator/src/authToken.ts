@@ -1,1 +1,1 @@
-export const kAuthToken = '50f07ba6acef24f6440f64bff31a1f83861900c4';
+export const kAuthToken = '';
