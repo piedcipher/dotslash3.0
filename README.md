@@ -72,6 +72,47 @@ Developer Tool
 
 - [url_launcher](https://pub.dev/packages/url_launcher)
 
+## Development Setup
+- Clone This Repository
+
+- CLI App
+    ```
+    $ cd dartpad_gen_cli/
+    $ pub get
+    ```
+    
+    - Add [Personal Access Token](https://github.com/settings/tokens) with gist scope [here](https://github.com/piedcipher/dotslash3.0/blob/master/dartpad_gen_cli/lib/authtoken.dart)
+    
+    ```
+    $ cd bin/
+    $ dart2native main.dart -o dartpadgen.dart
+    $ ./dartpadgen.dart file1.dart file2.dart ... [fileN.dart]
+    ```
+
+- VSCode Extension
+    ```
+    $ cd dartpad_gen_vscode/dartpad-generator/
+    $ npm install
+    $ code .
+    ```
+    
+    - Add [Personal Access Token](https://github.com/settings/tokens) with gist scope [here](https://github.com/piedcipher/dotslash3.0/blob/master/dartpad_gen_vscode/dartpad-generator/src/authToken.ts)
+    - Press `F5` to Build
+    - Open a Dart File
+    - Press `Ctrl + Shift + P` > `Dartpad Generator`
+    
+- Mobile App
+    ```
+    $ cd dartpad_gen_gui/
+    $ flutter pub get
+    ```
+    
+    - Add [Personal Access Token](https://github.com/settings/tokens) with gist scope [here](https://github.com/piedcipher/dotslash3.0/blob/master/dartpad_gen_gui/lib/utils/authtoken.dart)
+    
+    ```
+    $ flutter run
+    ```
+
 ## Contributing
 Feel free to contribute to the project by creating [issues](https://github.com/piedcipher/dotslash3.0/issues) or sending pull-requests.
 
