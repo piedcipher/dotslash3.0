@@ -1,8 +1,16 @@
 <h1 align="center">Dartpad Generator</h1>
 
+<h4 align="center">Built with :heart: at <a href="https://hackdotslash.co.in/">DotSlash</a></h4>
+
 <p align="center"><img src="https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/logo.png" alt="logo"></p>
 
 <h2 align="center">Creating <a href="https://dartpad.dev">Dartpad</a> Snippets Made Easy :dart:</h2>
+
+## Team
+Teen Tigada Kaam Bigada
+
+## Theme
+Developer Tool
 
 ## Problem Statement
 - [Dartpad](https://dartpad.dev) is a service by Google to run Dart & Flutter code online (web app), without installing any special softwares.
