@@ -27,16 +27,12 @@ class HomeScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.pink,
         onPressed: () async {
-          final _file = await FilePicker.getFilePath(fileExtension: 'dart');
-          final fileInstance = File('$_file');
-          final contents = await fileInstance.readAsString();
+          final Map<String, String> _dartFiles =
+              await FilePicker.getMultiFilePath(fileExtension: 'dart');
           Navigator.pushNamed(
             context,
             '/editor',
-            arguments: [
-              'testmain.dart',
-              contents,
-            ],
+            arguments: _dartFiles,
           );
         },
         tooltip: 'File Picker',

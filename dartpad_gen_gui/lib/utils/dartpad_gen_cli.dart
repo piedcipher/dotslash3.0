@@ -14,7 +14,7 @@ class DartpadGenerator {
     @required this.fileContents,
   });
 
-  Future<String> invokeGenerator() async {
+  invokeGenerator() async {
     final response = await http.post(
       'https://api.github.com/gists',
       headers: {

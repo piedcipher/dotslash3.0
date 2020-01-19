@@ -1,12 +1,11 @@
-import 'dart:convert';
+import 'dart:io';
 
+import 'package:dartpad_gen_gui/widgets/custom_textformfield.dart';
 import 'package:flutter/material.dart';
 
-import 'package:http/http.dart' as http;
 import 'package:flutter_linkify/flutter_linkify.dart';
 
 import 'package:dartpad_gen_gui/utils/dartpad_gen_cli.dart';
-import 'package:dartpad_gen_gui/utils/constants.dart';
 import 'package:share_extend/share_extend.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -16,13 +15,15 @@ class EditorScreen extends StatefulWidget {
 }
 
 class _TextEditorState extends State<EditorScreen> {
-  final controller = TextEditingController();
+  List<CustomTextFormField> _customTextFormFieldsList = [];
+  List _finalDartLinks = [];
 
   @override
   Widget build(BuildContext context) {
-    final List<String> arguments = ModalRoute.of(context).settings.arguments;
-    controller.text = arguments[1];
+    final Map<String, String> dartFiles =
+        ModalRoute.of(context).settings.arguments;
     return Scaffold(
+      backgroundColor: Color(0xFF12202F),
       appBar: AppBar(
         backgroundColor: Color(0xFF1C2834),
         leading: IconButton(
@@ -33,60 +34,29 @@ class _TextEditorState extends State<EditorScreen> {
         ),
         title: Text('Text Editor'),
       ),
-      body: Container(
-        color: Color(0xFF12202F),
-        child: TextFormField(
-          cursorColor: Colors.white,
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w300),
-          maxLines: 100,
-          controller: controller,
-          decoration: InputDecoration(
-            filled: true,
-            fillColor: Color(0xFF12202F),
-          ),
-        ),
+      body: ListView(
+        children: dartFiles.keys.map((dartFile) {
+          final customTextFormField = CustomTextFormField(
+            fileName: dartFile,
+            textEditingController: TextEditingController()
+              ..text = File(dartFiles[dartFile]).readAsStringSync(),
+          );
+          _customTextFormFieldsList.add(customTextFormField);
+          return customTextFormField;
+        }).toList(),
       ),
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () async {
-          print('Bruh ${arguments[0]}');
-          print('Bruh ${controller.text}');
-          final dartpadLink = await DartpadGenerator(
-                  fileName: arguments[0], fileContents: controller.text)
-              .invokeGenerator();
-          await showDialog(
-            context: context,
-            barrierDismissible: false,
-            builder: (builder) => AlertDialog(
-              actions: <Widget>[
-                FlatButton(
-                  child: Text('Close'),
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                ),
-                FlatButton(
-                  child: Text('Share'),
-                  onPressed: () async {
-                    await ShareExtend.share(dartpadLink, 'text');
-                  },
-                ),
-              ],
-              title: Text('Dartpad Link'),
-              content: Column(
-                mainAxisSize: MainAxisSize.min,
-                children: <Widget>[
-                  Center(
-                    child: Linkify(
-                      onOpen: (link) async {
-                        await launch(dartpadLink);
-                      },
-                      text: dartpadLink,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          );
+          int i = -1;
+          dartFiles.keys.forEach((dartFile) async {
+            i++;
+            final link = await DartpadGenerator(
+                    fileName: dartFile,
+                    fileContents:
+                        _customTextFormFieldsList[i].textEditingController.text)
+                .invokeGenerator();
+            print('Bruh $link');
+          });
         },
         splashColor: Colors.white,
         tooltip: 'Get Link',
@@ -95,25 +65,5 @@ class _TextEditorState extends State<EditorScreen> {
         backgroundColor: Colors.pink,
       ),
     );
-  }
-
-  Future compile() async {
-    http.Response response = await http.post(
-      jsonEncode(
-        [
-          {
-            "url": "https://api.jdoodle.com/v1/execute",
-            "Content-Type": "application/json",
-            "clientId": "$kClientID",
-            "clientSecret": "$kClientSecret",
-            "script": "void main() { print('Hi'); }",
-            "language": "dart",
-            "versionIndex": "3",
-          }
-        ],
-      ),
-    );
-    print(response.statusCode);
-    return jsonDecode(response.body);
   }
 }
