@@ -7,8 +7,16 @@
 ## Problem Statement
 - [Dartpad](https://dartpad.dev) is a service by Google to run Dart & Flutter code online (web app), without installing any special softwares.
 
+![](https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/1.png)
+
 - If you want to share link to your awesome dartpad code then you've to create a [Gist](https://gist.github.com) first. Then from the url of the gist, you need to copy **id** and append it to https://dartpad.dev/<gist-id> to share your dartpad code's link.
     
+![](https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/2.png)
+
+![](https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/3.png)
+
+![](https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/4.png)
+
 - This is process is very time consuming and involves unnecessary steps. https://github.com/dart-lang/dart-pad/wiki/Sharing-Guide
 
 ## Proposed Solutions
