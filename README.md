@@ -4,6 +4,20 @@
 
 <h2 align="center">Creating <a href="https://dartpad.dev">Dartpad</a> Snippets Made Easy :dart:</h2>
 
+## Problem Statement
+- [Dartpad](https://dartpad.dev) is a service by Google to run Dart & Flutter code online (web app), without installing any special softwares.
+
+- If you want to share link to your awesome dartpad code then you've to create a [Gist] first. Then from the url of the gist, you need to copy **id** and append it to https://dartpad.dev/<gist-id> to share your dartpad code's link.
+    
+- This is process is very time consuming and involves unnecessary steps. https://github.com/dart-lang/dart-pad/wiki/Sharing-Guide
+
+## Proposed Solutions
+🥁🥁
+**Introducing Dartpad Generator**, to easily share Dartpad snippets without any hassles.
+
+- Dartpad Generator can be accessed via Mobile app, CommandLine App or VSCode Extension.
+- underneath the hood it makes a POST HTTP call to gist API to generate sharable dartpad :link: and does the heavy lifting for you.
+
 ## TechStack
 - [CLI App](https://github.com/piedcipher/dotslash3.0/tree/master/dartpad_gen_cli)
     - Dart
