@@ -1,6 +1,6 @@
 <h1 align="center">Dartpad Generator</h1>
 
-<h4 align="center">Built with :heart: at <a href="https://twitter.com/hackatdotslash">DotSlash</a></h4>
+<h4 align="center">Built with :heart: at <a href="https://twitter.com/hackatdotslash">DotSlash Hackathon</a></h4>
 
 <p align="center"><img src="https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/logo.png" alt="logo"></p>
 
@@ -32,7 +32,7 @@ Developer Tool
 **Introducing Dartpad Generator**, to easily share Dartpad snippets without any hassles.
 
 - Dartpad Generator can be accessed via Mobile app, CommandLine App or VSCode Extension.
-- underneath the hood it makes a POST HTTP call to gist API to generate sharable dartpad :link: and does the heavy lifting for you.
+- Underneath the hood it makes a POST HTTP call to gist API to generate sharable dartpad :link: and does the heavy lifting for you.
 - Built for Developers by Developers :blue_heart:
 
 ## TechStack
