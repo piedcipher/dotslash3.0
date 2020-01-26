@@ -16,11 +16,10 @@ export function activate(context: vscode.ExtensionContext) {
 					[extractedFileName]: {'content': fileContent}
 				}}).then(function (response: any) {
 					if(response.status == 201) {
-						console.log('https://dartpad.dev/' + response.data.id);
+						vscode.window.showInformationMessage('https://dartpad.dev/' + response.data.id);
 					} else {
-						console.log('Something went wrong. Status code - ' + response.status);
+						vscode.window.showInformationMessage('Something went wrong. Status code - ' + response.status);
 					}
-				console.log(response.data);
 			});
 		});
 	});
