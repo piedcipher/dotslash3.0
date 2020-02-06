@@ -10,14 +10,19 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:extension.dartpad-generator"
+		"onCommand:extension.dartpad-generator-public",
+		"onCommand:extension.dartpad-generator-private"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "extension.dartpad-generator",
-				"title": "Dartpad Generator"
+				"command": "extension.dartpad-generator-public",
+				"title": "Dartpad Generator - Public"
+			},
+			{
+				"command": "extension.dartpad-generator-private",
+				"title": "Dartpad Generator - Private"
 			}
 		]
 	},
