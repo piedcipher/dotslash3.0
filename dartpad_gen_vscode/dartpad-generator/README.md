@@ -1,8 +1,8 @@
 <h1 style='text-align: center;'>DartPad Generator</h1>
 
-<p style='text-align: center;'><img src='https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/logo.png'></p>
+<p align="center"><img src='https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/logo.png'></p>
 
-<p style='text-align: center;'><img src='https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/vsc-extension.png'></p>
+<p align="center"><img src='https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/vsc-extension.png'></p>
 
 ## Features
 
@@ -14,7 +14,7 @@
 
 - Add [GitHub Personal Access Token](https://github.com/settings/tokens) with Gist scope in extension settings.
 
-<p style='text-align: center;'><img src='https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/vsc-extension-settings.png'></p>
+<p align="center"><img src='https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/vsc-extension-settings.png'></p>
 
 ## Release Notes
 
