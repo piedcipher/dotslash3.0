@@ -3,6 +3,15 @@
 	"displayName": "Dartpad Generator",
 	"description": "Creating Dartpad Snippets Made Easy",
 	"version": "0.0.1",
+	"publisher": "piedcipher",
+	"repository": {
+		"url": "https://github.com/piedcipher/dotslash3.0/tree/master/dartpad_gen_vscode/dartpad-generator"
+	},
+	"author": {
+		"name": "Tirth Patel",
+		"email": "pateltirth454@gmail.com",
+		"url": "https://github.com/piedcipher"
+	},
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -15,6 +24,18 @@
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"configuration": [
+			{
+				"title": "GitHub Personal Access Token With Gist Scope",
+				"properties": {
+					"dartpad-generator.githubAccessToken": {
+						"default": "",
+						"type": "string",
+						"description": "GitHub Personal Access Token With Gist Scope"
+					}
+				}
+			}
+		],
 		"commands": [
 			{
 				"command": "extension.dartpad-generator-public",
