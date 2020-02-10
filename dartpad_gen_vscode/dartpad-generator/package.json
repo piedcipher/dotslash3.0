@@ -4,7 +4,10 @@
 	"description": "Creating Dartpad Snippets Made Easy",
 	"version": "0.0.1",
 	"publisher": "piedcipher",
+	"icon": "images/logo.png",
+	"markdown": "github",
 	"repository": {
+		"type": "git",
 		"url": "https://github.com/piedcipher/dotslash3.0/tree/master/dartpad_gen_vscode/dartpad-generator"
 	},
 	"author": {
@@ -15,9 +18,6 @@
 	"engines": {
 		"vscode": "^1.41.0"
 	},
-	"categories": [
-		"Other"
-	],
 	"activationEvents": [
 		"onCommand:extension.dartpad-generator-public",
 		"onCommand:extension.dartpad-generator-private"
