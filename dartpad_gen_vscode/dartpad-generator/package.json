@@ -2,7 +2,7 @@
 	"name": "dartpad-generator",
 	"displayName": "Dartpad Generator",
 	"description": "Creating Dartpad Snippets Made Easy",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "piedcipher",
 	"icon": "images/logo.png",
 	"markdown": "github",
