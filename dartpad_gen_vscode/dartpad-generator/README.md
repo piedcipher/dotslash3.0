@@ -1,4 +1,4 @@
-<h1 style='text-align: center;'>DartPad Generator</h1>
+<h1 align="center" style='text-align: center;'>DartPad Generator</h1>
 
 <p align="center"><img src='https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/logo.png'></p>
 
@@ -17,6 +17,10 @@
 <p align="center"><img src='https://raw.githubusercontent.com/piedcipher/dotslash3.0/master/readme-media/vsc-extension-settings.png'></p>
 
 ## Release Notes
+
+### 0.0.2
+
+- Updated Dependencies
 
 ### 0.0.1
 
