@@ -25,3 +25,7 @@
 ### 0.0.1
 
 - Initial release
+
+### Sponsors
+
+- [Paypal](https://www.paypal.com/donate?business=RBHMVN4AQGQE2&currency_code=BRL)
